@@ -31,7 +31,7 @@ int main() {
     static ATMBooth* user2 = new ATMBooth();
 
     //why we use static object: 
-    //We use static object such that we don't need to recreate object to same call
+    //We use static object such that we don't need to recreate object for similar work
     //we can use same task of different user using an static object by passing different value of different users.
     user->balWithdraw("21314234", 2000);//call for first user
     user->balWithdraw("01213214", 1000);//call for second user
