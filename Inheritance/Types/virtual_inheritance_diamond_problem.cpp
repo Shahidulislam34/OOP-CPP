@@ -23,13 +23,14 @@ public:
 };
 
 class D : public B, public C{
-    
+
 };
 
 int main() {
     D* obj = new D();
-    obj->print();//diamond problem
-    obj->B::show();//use scope resolution operator to solve ambiguity of multiple inheritance
+    obj->print();//Class A
+    obj->B::show();//Class B, use scope resolution operator to solve ambiguity of multiple inheritance
+    obj->C::show();//Class C
 
     return 0;
 }

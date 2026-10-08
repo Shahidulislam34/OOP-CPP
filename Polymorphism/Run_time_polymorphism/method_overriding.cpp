@@ -6,12 +6,15 @@ public:
     virtual void executePayment() {
         cout << "Payment Successful" << endl;
     }
+    Payment(){
+        cout << "Payment Constructor" << endl;
+    }
 };
 class Electricity : public Payment{
 public:
     string name,accNum,dueDate = "05.04.26", month;
     Electricity():Payment() {
-        
+        cout << "Electricity Constructor" << endl;
     }
     void Verdict() {
         cout << "Payment Successful" << endl;
@@ -34,6 +37,7 @@ private:
     }
 public:
     PalliBidyut():Electricity() {
+        cout << "PalliBidyut Constructor" << endl;
         cout << "Fill up the form:" << endl;
         cout << "User Name:"; cin >> name;
         cout << "Account Number:"; cin >> accNum;
